@@ -1,4 +1,6 @@
 # geometry_calc
+![geometry_calc](screenshots/geometry calc.png)
+
 Menu-based geometry calculator for calculating 2D plane and 3D solid geometric shapes.
 Before using geometry calc, please install python 3. Visit official python website : 
 https://www.python.org/downloads/
