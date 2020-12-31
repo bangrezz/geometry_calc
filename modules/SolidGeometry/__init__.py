@@ -1,0 +1,3 @@
+"""
+Solid geometry modules
+"""
