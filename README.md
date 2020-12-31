@@ -18,12 +18,12 @@ git clone ....
 Open terminal or CMD (if using windows) and follow the command below to 
 install all dependencies :
 
-If using Linux or MacOS
+- If using Linux or MacOS
 ```
 sudo pip3 install rich, pyfiglet, colorama
 ```
 
-If using Windows
+- If using Windows
 ```
 pip3 install rich, pyfiglet, colorama
 ```
