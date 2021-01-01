@@ -22,12 +22,12 @@ install all dependencies :
 
 - If using Linux or MacOS
 ```
-sudo pip3 install rich, pyfiglet, colorama
+sudo pip3 install rich pyfiglet colorama
 ```
 
 - If using Windows
 ```
-pip3 install rich, pyfiglet, colorama
+pip3 install rich pyfiglet colorama
 ```
 
 ## Usage
