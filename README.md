@@ -39,4 +39,13 @@ python3 geometry_calc.py
 3. Follow all instruction on the program.
 
 ## Note
-- The units displayed don't affect the calculation results. it's just a view.
+1. The units displayed don't affect the calculation results. it's just a view.
+2. Available shapes :
+   - Plane geometry
+        - rectangle
+        - square
+        - triangle (included pythagorean)
+   - Solid geometry
+        - cube
+        - rectangle prism
+        - sphere
