@@ -49,3 +49,4 @@ python3 geometry_calc.py
         - cube
         - rectangle prism
         - sphere
+3. Other geometry shapes are under development
