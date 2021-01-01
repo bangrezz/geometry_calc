@@ -13,7 +13,9 @@ def clear():
 
 def printabout():
     print("""
-# Geometry Calc
+# geometry_calc
+![geometry_calc](https://github.com/BangrezzTech/geometry_calc/blob/main/screenshots/geometry%20calc.png)
+
 Menu-based geometry calculator for calculating 2D plane and 3D solid geometric shapes.
 Before using geometry calc, please install python 3. Visit official python website : 
 https://www.python.org/downloads/
@@ -30,7 +32,7 @@ git clone https://github.com/BangrezzTech/geometry_calc.git
 ```
 
 ## Dependency
-Open terminal or CMD (if using windows) and follow the command below to 
+Open your terminal (CMD or Powershell if using windows) and follow the command below to 
 install all dependencies :
 
 - If using Linux or MacOS
@@ -45,15 +47,24 @@ pip3 install rich pyfiglet colorama
 
 ## Usage
 1. Go to geometry_calc directory.
-2. Running on your terminal or CMD with command
+2. Running on your terminal (CMD or Powershell if using windows) with command
 ``` 
 python3 geometry_calc.py
 ```
 3. Follow all instruction on the program.
 
 ## Note
-- The units displayed don't affect the calculation results. it's just a view.
-
+1. The units displayed don't affect the calculation results. it's just a view.
+2. Available shapes :
+   - Plane geometry
+        - rectangle
+        - square
+        - triangle (included pythagorean)
+   - Solid geometry
+        - cube
+        - rectangle prism
+        - sphere
+3. Other geometry shapes are under development
     """)
     print("\nPress [blue]<enter>[/blue] to continue");input()
     clear()
