@@ -59,7 +59,7 @@ def PlaneGeo_Menu():
     PlaneGeo_banner() #print banner and plane geometry menu
     def select_planegeo_menu():
         try:
-            select_planegeo = int(input("\n\t  Select from the menu [ 1 | 2 | 3 | 99 ] : "))
+            select_planegeo = int(input("\n\t  Select from the menu : "))
 
             if select_planegeo == 1:    #square
                 clear()
@@ -98,7 +98,7 @@ def SolidGeo_Menu():
     SolidGeo_banner() #print banner and solid geometry menu
     def select_solidgeo_menu():
         try:
-            select_solidgeo = int(input("\n\t  Select from the menu [ 1 | 2 | 3 | 99 ] : "))
+            select_solidgeo = int(input("\n\t  Select from the menu : "))
 
             if select_solidgeo == 1: #cube
                 clear()
