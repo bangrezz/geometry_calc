@@ -13,7 +13,7 @@ https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
 - Clone repository
 
 ```
-git clone https://github.com/BangrezzTech/geometry_calc.git
+git clone https://github.com/bangrezz/geometry_calc.git
 ```
 
 ## Dependency
