@@ -51,6 +51,7 @@ def PlaneGeo_banner():
             1. Square
             2. Rectangle
             3. Triangle
+            4. Circle
 
             99. Go back to the previous menu
                 """
@@ -128,6 +129,12 @@ def square_banner():
 def rectangle_banner():
     fontsbanner = Figlet(font='slant')
     textbanner = (fontsbanner.renderText("Rectangle"))
+    print(colorama.Fore.LIGHTMAGENTA_EX, textbanner)   # set textbanner color
+    print(colorama.Fore.RESET)  #for reset color to default
+
+def circle_banner():
+    fontsbanner = Figlet(font='slant')
+    textbanner = (fontsbanner.renderText("Circle"))
     print(colorama.Fore.LIGHTMAGENTA_EX, textbanner)   # set textbanner color
     print(colorama.Fore.RESET)  #for reset color to default
 
