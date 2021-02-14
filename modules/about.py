@@ -57,13 +57,14 @@ python3 geometry_calc.py
 1. The units displayed don't affect the calculation results. it's just a view.
 2. Available geometry shapes :
    - Plane geometry
-        - rectangle
-        - square
-        - triangle (included pythagorean)
+        - Rectangle
+        - Square
+        - Triangle (included pythagorean)
+        - Circle    [NEW]
    - Solid geometry
-        - cube
-        - rectangle prism
-        - sphere
+        - Cube
+        - Rectangle prism
+        - Sphere
 3. Other geometry shapes are under development
     """)
     print("\nPress [blue]<enter>[/blue] to continue");input()
