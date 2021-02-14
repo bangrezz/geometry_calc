@@ -48,6 +48,6 @@ python3 geometry_calc.py
         - Circle    [NEW]
    - Solid geometry
         - Cube
-        - Rectangle prism
+        - Rectangular prism
         - Sphere
 3. Other geometry shapes are under development
