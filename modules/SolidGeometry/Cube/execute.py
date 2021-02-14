@@ -16,7 +16,7 @@ def clear():
 def Execute_Cube():
     clear()
     cube_banner()
-    print("Calculate Cube Surface Area & Volume")
+    print("Calculate surface area and volume of the cube")
     #initiating
     def Input_side():   #input side length
         try:

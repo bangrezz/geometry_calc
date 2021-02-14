@@ -16,7 +16,7 @@ def clear():
 def Execute_RectangularPrism():
     clear()
     rectangularprism_banner()
-    print("Calculate Rectangular Prism Surface Area & Volume")
+    print("Calculate surface area and volume of the rectangular prism")
     #initiating
     def Input_length():
         try:

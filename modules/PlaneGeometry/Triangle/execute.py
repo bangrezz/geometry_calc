@@ -15,8 +15,7 @@ def clear():
 
 def Execute_Area():
     clear()
-    print("Calculate Triangle Area")
-    #initiating
+    print("Calculate area of the triangle")
     def Input_Base():   #input base length
         try:
             global Base
@@ -50,7 +49,7 @@ def Execute_Area():
 
 def Execute_Perimeter():
     clear()
-    print("Calculate Triangle Perimeter")
+    print("Calculate perimeter of the triangle")
     #initiating
     def Input_side_a(): #side a
         try:

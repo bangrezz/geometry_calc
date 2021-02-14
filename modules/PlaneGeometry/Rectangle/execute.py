@@ -16,7 +16,7 @@ def clear():
 def Execute_Rectangle():
     clear()
     rectangle_banner()
-    print("Calculate Rectangle Area & Perimeter")
+    print("Calculate area and perimeter of the rectangle")
     #initiating
     def Input_length():
         try:

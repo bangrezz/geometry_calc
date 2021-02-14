@@ -16,7 +16,7 @@ def clear():
 def Execute_Sphere():
     clear()
     sphere_banner()
-    print("Calculate Sphere Surface Area & Volume")
+    print("Calculate surface area and volume of the sphere")
     #initiating
     def Input_radius():   #input side length
         try:

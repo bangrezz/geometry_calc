@@ -15,7 +15,7 @@ def clear():
 def Execute_Square():
     clear()
     square_banner()
-    print("Calculate Square Area & Perimeter")
+    print("Calculate area and perimeter of the square")
     #initiating
     def Input_side():   #input side length
         try:

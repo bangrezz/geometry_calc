@@ -1,4 +1,4 @@
-# module for execute area & perimeter circle
+# module for execute area & circumference circle
 from os import system, name
 from modules.PlaneGeometry.Circle.calculate import Circle
 from modules.banners import circle_banner
