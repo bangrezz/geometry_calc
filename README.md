@@ -40,7 +40,7 @@ python3 geometry_calc.py
 
 ## Note
 1. The units displayed don't affect the calculation results. it's just a view.
-2. Available shapes :
+2. Available geometry shapes :
    - Plane geometry
         - rectangle
         - square
