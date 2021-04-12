@@ -78,6 +78,7 @@ def SolidGeo_banner():
             1. Cube
             2. Rectangular Prism
             3. Sphere
+            4. Cylinder
 
             99. Go back to the previous menu
                     """
@@ -158,5 +159,11 @@ def rectangularprism_banner():
 def sphere_banner():
     fontsbanner = Figlet(font='slant')
     textbanner = (fontsbanner.renderText("Sphere"))
+    print(colorama.Fore.LIGHTMAGENTA_EX, textbanner)   # set textbanner color
+    print(colorama.Fore.RESET)  #for reset color to default
+    
+def cylinder_banner():
+    fontsbanner = Figlet(font='slant')
+    textbanner = (fontsbanner.renderText("Cylinder"))
     print(colorama.Fore.LIGHTMAGENTA_EX, textbanner)   # set textbanner color
     print(colorama.Fore.RESET)  #for reset color to default
