@@ -50,4 +50,5 @@ python3 geometry_calc.py
         - Cube
         - Rectangular prism
         - Sphere
+        - Cylinder  [NEW]
 3. Other geometry shapes are under development
