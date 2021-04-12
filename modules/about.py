@@ -1,15 +1,5 @@
-from os import system, name
+from modules.clearscreen import clear
 from rich import print
-
-def clear(): 
-
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
 
 def printabout():
     print("""
@@ -65,6 +55,7 @@ python3 geometry_calc.py
         - Cube
         - Rectangular prism
         - Sphere
+        - Cylinder [NEW]
 3. Other geometry shapes are under development
     """)
     print("\nPress [blue]<enter>[/blue] to continue");input()

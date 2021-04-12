@@ -1,14 +1,5 @@
-from os import system, name
+from modules.clearscreen import clear
 from rich import print
-def clear(): 
-
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
 
 def question():
     try:
