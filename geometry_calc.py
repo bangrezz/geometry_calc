@@ -8,6 +8,7 @@ from modules.PlaneGeometry.Circle.execute import Execute_Circle
 from modules.SolidGeometry.Cube.execute import Execute_Cube
 from modules.SolidGeometry.RectangularPrism.execute import Execute_RectangularPrism
 from modules.SolidGeometry.Sphere.execute import Execute_Sphere
+from modules.SolidGeometry.Cylinder.execute import Execute_Cylinder
 from rich import print
 import colorama
 colorama.init()
@@ -113,6 +114,10 @@ def SolidGeo_Menu():
 
             elif select_solidgeo == 3: # sphere
                 Execute_Sphere()   #calculate sphere
+                SolidGeo_Menu()
+
+            elif select_solidgeo == 4: # cylinder
+                Execute_Cylinder()
                 SolidGeo_Menu()
 
             elif select_solidgeo == 99:
