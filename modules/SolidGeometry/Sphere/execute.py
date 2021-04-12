@@ -18,7 +18,7 @@ def Execute_Sphere():
     sphere_banner()
     print("Calculate surface area and volume of the sphere")
     #initiating
-    def Input_radius():   #input side length
+    def Input_radius():
         try:
             global radius
             radius = float(input("\nEnter radius length (r) = "))
