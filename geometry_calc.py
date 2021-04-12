@@ -1,4 +1,4 @@
-from os import system, name
+from modules.clearscreen import clear
 from modules.banners import PlaneGeo_banner, SolidGeo_banner, main_banner
 from modules.PlaneGeometry.Triangle.menu import __triangle__
 from modules.PlaneGeometry.Square.execute import Execute_Square
@@ -10,19 +10,6 @@ from modules.SolidGeometry.RectangularPrism.execute import Execute_RectangularPr
 from modules.SolidGeometry.Sphere.execute import Execute_Sphere
 from modules.SolidGeometry.Cylinder.execute import Execute_Cylinder
 from rich import print
-import colorama
-colorama.init()
-
-
-def clear(): 
-
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
 
 def MainMenu():
     clear()

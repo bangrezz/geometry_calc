@@ -1,17 +1,9 @@
 # module for execute area & perimeter triangle and pythagorean
 
-from os import system, name
+from modules.clearscreen import clear
 from modules.PlaneGeometry.Triangle.calculate import TriangleArea, TrianglePerimeter
 from modules.PlaneGeometry.Triangle.pythagorean import Pythagorean_Side_a, Pythagorean_Side_b, Pythagorean_Hypotenuse
 from modules.wannaquit import question
-
-def clear(): 
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
 
 def Execute_Area():
     clear()

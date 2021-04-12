@@ -1,15 +1,6 @@
-from os import system, name
+from modules.clearscreen import clear
 from modules.PlaneGeometry.Triangle.execute import Execute_Area, Execute_Perimeter,  Execute_Pythagorean
 from modules.banners import triangle_banner, pythagorean_banner
-
-
-def clear(): 
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
 
 # pythagorean main menu, triangle submenu
 def __pythagorean__():

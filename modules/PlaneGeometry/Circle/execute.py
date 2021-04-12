@@ -1,16 +1,8 @@
 # module for execute area & circumference circle
-from os import system, name
+from modules.clearscreen import clear
 from modules.PlaneGeometry.Circle.calculate import Circle
 from modules.banners import circle_banner
 from modules.wannaquit import question
-
-def clear(): 
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
 
 def Execute_Circle():
     clear()

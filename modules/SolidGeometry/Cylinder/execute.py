@@ -1,17 +1,9 @@
 # module for execute cylinder
 
-from os import system, name
+from modules.clearscreen import clear
 from modules.SolidGeometry.Cylinder.calculate import Cylinder
 from modules.banners import cylinder_banner
 from modules.wannaquit import question
-
-def clear(): 
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
 
 def Execute_Cylinder():
     clear()
