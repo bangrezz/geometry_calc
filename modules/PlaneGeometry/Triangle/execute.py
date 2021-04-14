@@ -3,7 +3,7 @@
 from modules.clearscreen import clear
 from modules.PlaneGeometry.Triangle.calculate import TriangleArea, TrianglePerimeter
 from modules.PlaneGeometry.Triangle.pythagorean import Pythagorean_Side_a, Pythagorean_Side_b, Pythagorean_Hypotenuse
-from modules.wannaquit import question
+from modules.PlaneGeometry.Triangle.wannaquit import TriangleQuestion, PythagoreanQuestion
 
 def Execute_Area():
     clear()
@@ -37,7 +37,8 @@ def Execute_Area():
     area.Calculating_Area()
     result = area.Result_Area()
     print(result)
-    question()
+    question = TriangleQuestion()
+    question.AreaQuestion()
 
 def Execute_Perimeter():
     clear()
@@ -84,7 +85,8 @@ def Execute_Perimeter():
     perimeter.Calculating_Perimeter()
     result = perimeter.Result_Perimeter()
     print(result)
-    question()
+    question = TriangleQuestion()
+    question.PerimeterQuestion()
 
 class Execute_Pythagorean:
     def Execute_side_a(self):  # function for find side a
@@ -124,7 +126,8 @@ class Execute_Pythagorean:
         ExecSide_a = Pythagorean_Side_a(b,c)
         ExecSide_a.Find_Side_a()
         result = ExecSide_a.Result_Side_a(); print(result)
-        question()
+        question = PythagoreanQuestion()
+        question.A_Question()
 
     def Execute_side_b(self):  # function for find side b
         clear()
@@ -163,7 +166,8 @@ class Execute_Pythagorean:
         ExecSide_b = Pythagorean_Side_b(a,c)
         ExecSide_b.Find_Side_b()
         result = ExecSide_b.Result_Side_b(); print(result)
-        question()
+        question = PythagoreanQuestion()
+        question.B_Question()
 
     def Execute_Hypotenuse(self):  # function for find side hypotenuse
         clear()
@@ -197,4 +201,5 @@ class Execute_Pythagorean:
         Exec_Hypotenuse = Pythagorean_Hypotenuse(a,b)
         Exec_Hypotenuse.Find_Hypotenuse()
         result = Exec_Hypotenuse.Result_Hypotenuse(); print(result)
-        question()
+        question = PythagoreanQuestion()
+        question.C_Question()

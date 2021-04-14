@@ -3,7 +3,7 @@
 from modules.clearscreen import clear
 from modules.SolidGeometry.RectangularPrism.calculate import RectangularPrism
 from modules.banners import rectangularprism_banner
-from modules.wannaquit import question
+from modules.SolidGeometry.RectangularPrism.wannaquit import MainQuestion
 
 def Execute_RectangularPrism():
     clear()
@@ -60,4 +60,4 @@ def Execute_RectangularPrism():
     ExecRectangularPrism = RectangularPrism(length,width,height)
     ExecRectangularPrism.Calculating_Volume();ExecRectangularPrism.Calculating_SurfaceArea()
     result = ExecRectangularPrism.Result();print(result)
-    question()
+    MainQuestion()

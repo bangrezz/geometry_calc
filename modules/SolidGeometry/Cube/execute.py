@@ -3,7 +3,7 @@
 from modules.clearscreen import clear
 from modules.SolidGeometry.Cube.calculate import Cube
 from modules.banners import cube_banner
-from modules.wannaquit import question
+from modules.SolidGeometry.Cube.wannaquit import MainQuestion
 
 def Execute_Cube():
     clear()
@@ -25,4 +25,4 @@ def Execute_Cube():
     ExecCube = Cube(side)
     ExecCube.Calculating_Volume();ExecCube.Calculating_SurfaceArea()
     result = ExecCube.Result();print(result)
-    question()
+    MainQuestion()

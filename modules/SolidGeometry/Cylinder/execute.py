@@ -3,7 +3,7 @@
 from modules.clearscreen import clear
 from modules.SolidGeometry.Cylinder.calculate import Cylinder
 from modules.banners import cylinder_banner
-from modules.wannaquit import question
+from modules.SolidGeometry.Cylinder.wannaquit import MainQuestion
 
 def Execute_Cylinder():
     clear()
@@ -55,4 +55,4 @@ Example : 3.14159""")
     ExecCylinder = Cylinder(radius, height, PI)
     ExecCylinder.Calculating_Volume();ExecCylinder.Calculating_SurfaceArea()
     result = ExecCylinder.Result();print(result)
-    question()
+    MainQuestion()

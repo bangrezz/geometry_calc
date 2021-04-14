@@ -2,7 +2,7 @@
 from modules.clearscreen import clear
 from modules.PlaneGeometry.Square.calculate import Square
 from modules.banners import square_banner
-from modules.wannaquit import question
+from modules.PlaneGeometry.Square.wannaquit import MainQuestion
 
 def Execute_Square():
     clear()
@@ -24,4 +24,4 @@ def Execute_Square():
     ExecSquare = Square(side)
     ExecSquare.Calculating_Area();ExecSquare.Calculating_Perimeter()
     result = ExecSquare.Result();print(result)
-    question()
+    MainQuestion()

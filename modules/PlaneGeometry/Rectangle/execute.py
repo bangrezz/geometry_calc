@@ -3,7 +3,7 @@
 from modules.clearscreen import clear
 from modules.PlaneGeometry.Rectangle.calculate import Rectangle
 from modules.banners import rectangle_banner
-from modules.wannaquit import question
+from modules.PlaneGeometry.Rectangle.wannaquit import MainQuestion
 
 def Execute_Rectangle():
     clear()
@@ -48,4 +48,4 @@ def Execute_Rectangle():
     ExecRectangle = Rectangle(length,width)
     ExecRectangle.Calculating_Area();ExecRectangle.Calculating_Perimeter()
     result = ExecRectangle.Result();print(result)
-    question()
+    MainQuestion()

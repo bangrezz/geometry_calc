@@ -3,7 +3,7 @@
 from modules.clearscreen import clear
 from modules.SolidGeometry.Sphere.calculate import Sphere
 from modules.banners import sphere_banner
-from modules.wannaquit import question
+from modules.SolidGeometry.Sphere.wannaquit import MainQuestion
 
 def Execute_Sphere():
     clear()
@@ -43,4 +43,4 @@ Example : 3.14159""")
     ExecSphere = Sphere(radius,PI)
     ExecSphere.Calculating_Volume();ExecSphere.Calculating_SurfaceArea()
     result = ExecSphere.Result();print(result)
-    question()
+    MainQuestion()

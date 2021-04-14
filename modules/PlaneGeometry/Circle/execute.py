@@ -2,7 +2,7 @@
 from modules.clearscreen import clear
 from modules.PlaneGeometry.Circle.calculate import Circle
 from modules.banners import circle_banner
-from modules.wannaquit import question
+from modules.PlaneGeometry.Circle.wannaquit import MainQuestion
 
 def Execute_Circle():
     clear()
@@ -42,4 +42,4 @@ Example : 3.14159""")
     ExecCircle = Circle(radius,PI)
     ExecCircle.Calculating_Area();ExecCircle.Calculating_Circumference()
     result = ExecCircle.Result();print(result)
-    question()
+    MainQuestion()

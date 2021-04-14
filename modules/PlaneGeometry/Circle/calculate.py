@@ -33,8 +33,8 @@ class Circle:
 
         --------------------RESULT--------------------
         
-        Circle perimeter               = {perimeter} cm
+        Circle perimeter                 = {perimeter} cm
         
-        Cirle area                    = {area} cm^2
+        Circle area                      = {area} cm^2
                     """
         return res
