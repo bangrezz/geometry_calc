@@ -25,7 +25,7 @@ class Circle:
 
         Pi value (π)                     = {self.PI}       
         
-        Formula the circle perimeter     = 2 * π * r
+        Formula the circle circumference = 2 * π * r
                                          = 2 * {self.PI} * {self.r} cm
         
         Formula the circle area          = π * r^2
@@ -33,7 +33,7 @@ class Circle:
 
         --------------------RESULT--------------------
         
-        Circle perimeter                 = {perimeter} cm
+        Circle circumference             = {perimeter} cm
         
         Circle area                      = {area} cm^2
                     """
