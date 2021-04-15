@@ -1,6 +1,7 @@
 from modules.clearscreen import clear
 from modules.PlaneGeometry.Triangle.execute import Execute_Area, Execute_Perimeter,  Execute_Pythagorean
 from modules.banners import triangle_banner, pythagorean_banner
+from rich import print
 
 # pythagorean main menu, triangle submenu
 def __pythagorean__():
@@ -21,10 +22,10 @@ def __pythagorean__():
             elif select_menu == 99:
                 clear()
             else:
-                print("\n\t  [ERROR] Select the menu correctly !")
+                print("\n\t  [red][ERROR][/red] Select the menu correctly !")
                 select_pythagorean()
         except ValueError:
-            print("\n\t  [ERROR] Your selection is invalid. Repeat again !")
+            print("\n\t  [red][ERROR][/red] Your selection is invalid. Repeat again !")
             select_pythagorean()
         except KeyboardInterrupt:
             print("\n\n\t  Thank you for using Geometry Calc :)")
@@ -51,10 +52,10 @@ def __triangle__():
             elif select_menu == 99:
                 clear() # go to Plane Geometry main menu
             else:
-                print("\n\t  [ERROR] Select the menu correctly !")
+                print("\n\t  [red][ERROR][/red] Select the menu correctly !")
                 select_triangle()
         except ValueError:
-            print("\n\t  [ERROR] Your selection is invalid. Repeat again !")
+            print("\n\t  [red][ERROR][/red] Your selection is invalid. Repeat again !")
             select_triangle()
         except KeyboardInterrupt:
             print("\n\n\t  Thank you for using Geometry Calc :)")

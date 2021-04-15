@@ -4,6 +4,7 @@ from modules.clearscreen import clear
 from modules.SolidGeometry.Cube.calculate import Cube
 from modules.banners import cube_banner
 from modules.SolidGeometry.Cube.wannaquit import MainQuestion
+from rich import print
 
 def Execute_Cube():
     clear()
@@ -14,9 +15,9 @@ def Execute_Cube():
         try:
             global side
             side = float(input("\nEnter side length (s) = "))
-            if side <= 0:print("[ERROR] The value must greater than 0 !");Input_side()
+            if side <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_side()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")

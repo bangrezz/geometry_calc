@@ -17,7 +17,7 @@ def MainQuestion():
                 from modules.SolidGeometry.Sphere.execute import Execute_Sphere
                 Execute_Sphere()
             elif select == 2:
-                print("Press [blue]<enter>[/blue] to continue")
+                print("Press [magenta]<enter>[/magenta] to continue")
                 input()
             elif select == 99:
                 print("\n\nThank you for using Geometry Calc :)")

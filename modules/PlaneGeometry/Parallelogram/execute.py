@@ -3,6 +3,7 @@ from modules.clearscreen import clear
 from modules.PlaneGeometry.Parallelogram.calculate import Parallelogram
 from modules.banners import parallelogram_banner
 from modules.PlaneGeometry.Parallelogram.wannaquit import MainQuestion
+from rich import print
 
 def Execute_Parallelogram():
     clear()
@@ -13,9 +14,9 @@ def Execute_Parallelogram():
         try:
             global Base
             Base = float(input("\nEnter base length (b) = "))
-            if Base <= 0:print("[ERROR] The value must greater than 0 !");Input_Base()
+            if Base <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_Base()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_Base()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")
@@ -25,9 +26,9 @@ def Execute_Parallelogram():
         try:
             global Height
             Height = float(input("\nEnter height length (h) = "))
-            if Height <= 0:print("[ERROR] The value must greater than 0 !");Input_Height()
+            if Height <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_Height()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_Height()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")

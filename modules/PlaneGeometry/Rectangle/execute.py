@@ -4,6 +4,7 @@ from modules.clearscreen import clear
 from modules.PlaneGeometry.Rectangle.calculate import Rectangle
 from modules.banners import rectangle_banner
 from modules.PlaneGeometry.Rectangle.wannaquit import MainQuestion
+from rich import print
 
 def Execute_Rectangle():
     clear()
@@ -14,9 +15,9 @@ def Execute_Rectangle():
         try:
             global length
             length = float(input("\nEnter length (l) = "))
-            if length <= 0:print("[ERROR] The value must greater than 0 !");Input_length()
+            if length <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_length()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_length()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")
@@ -26,24 +27,24 @@ def Execute_Rectangle():
         try:
             global width
             width = float(input("\nEnter width (w)  = "))
-            if width <= 0:print("[ERROR] The value must greater than 0 !");Input_width()
+            if width <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_width()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_width()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")
             exit()
     Input_width()
     if length == width:
-        print("\n[WARN] The rectangle is a square. Because the length value as same as the width value.")
+        print(f"\n[yellow][WARN][/yellow] The rectangle is a square. Because the length value ({length}) as same as the width value ({width}).")
         def width_sameAs_length():
             select = input("Are you sure to continue ? [y/n] : ")
             if select=='y':pass
             elif select=='n':
-                input("\nPress <enter> to go to repeat enter value\n")
+                print("\nPress [magenta]<enter>[/magenta] to go to repeat enter value\n");input()
                 rectangle_banner();print("Calculate Rectangle Area & Perimeter")
                 Input_length();Input_width()
-            else:print("\n[ERROR] Please enter correctly");width_sameAs_length()
+            else:print("\n[red][ERROR][/red] Please enter correctly");width_sameAs_length()
         width_sameAs_length()
     ExecRectangle = Rectangle(length,width)
     ExecRectangle.Calculating_Area();ExecRectangle.Calculating_Perimeter()
