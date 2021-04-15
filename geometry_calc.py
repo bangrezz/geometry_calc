@@ -4,6 +4,7 @@ from modules.PlaneGeometry.Triangle.menu import __triangle__
 from modules.PlaneGeometry.Square.execute import Execute_Square
 from modules.PlaneGeometry.Rectangle.execute import Execute_Rectangle
 from modules.PlaneGeometry.Circle.execute import Execute_Circle
+from modules.PlaneGeometry.Parallelogram.execute import Execute_Parallelogram
 
 from modules.SolidGeometry.Cube.execute import Execute_Cube
 from modules.SolidGeometry.RectangularPrism.execute import Execute_RectangularPrism
@@ -62,9 +63,13 @@ def PlaneGeo_Menu():
             elif select_planegeo == 3:  #triangle
                 __triangle__()  # go to triangle calc submenu
                 PlaneGeo_Menu()
-                
+
             elif select_planegeo == 4:  #circle
                 Execute_Circle()    # calculate circle
+                PlaneGeo_Menu()
+
+            elif select_planegeo == 5: #parallelogram
+                Execute_Parallelogram()
                 PlaneGeo_Menu()
 
             elif select_planegeo == 99:
