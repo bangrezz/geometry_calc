@@ -1,20 +1,21 @@
-# module for calculate surface area & volume sphere
+# module for calculate cylinder
 
-class Sphere:
-    def __init__(self, radius, PI):
+class Cylinder:
+    def __init__(self, radius, height, PI):
         self.r  = radius
         self.PI = PI
-
+        self.h  = height
+        
     def Calculating_Volume(self):
         global volume
-        volume = 4/3 * self.PI * self.r ** 3
+        volume = self.PI * self.r ** 2 * self.h     # π * r^2 * h
         return volume
-
+    
     def Calculating_SurfaceArea(self):
         global surface_area
-        surface_area = 4 * self.PI * self.r ** 2
+        surface_area = 2 * self.PI * self.r * (self.h + self.r)
         return surface_area
-
+    
     def Result(self):
         res = f"""\n
         ----------------------------------------------
@@ -22,14 +23,17 @@ class Sphere:
         ----------------------------------------------
 
         Radius (r)                       = {self.r} cm
-
+        
+        Height (h)                       = {self.h} cm
+        
         Pi value (π)                     = {self.PI}       
         
-        Formula the sphere surface area  = 4 * π * r^2
-                                         = 4 * {self.PI} * ({self.r})^2 cm
+        Formula the closed cylinder
+        surface area                     = 2 * π * r (h + r) 
+                                         = 2 * {self.PI} * {self.r} cm ({self.h} cm + {self.r} cm)
         
-        Formula the sphere volume        = 4/3 * π * r^3
-                                         = 4/3 * {self.PI} * ({self.r})^3 cm
+        Formula the cylinder volume      = π * r^2 * h
+                                         = {self.PI} * {self.r}^2 cm * {self.h} cm
 
         --------------------RESULT--------------------
         

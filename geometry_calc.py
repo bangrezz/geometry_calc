@@ -1,25 +1,16 @@
-from os import system, name
+from modules.clearscreen import clear
 from modules.banners import PlaneGeo_banner, SolidGeo_banner, main_banner
 from modules.PlaneGeometry.Triangle.menu import __triangle__
 from modules.PlaneGeometry.Square.execute import Execute_Square
 from modules.PlaneGeometry.Rectangle.execute import Execute_Rectangle
+from modules.PlaneGeometry.Circle.execute import Execute_Circle
+from modules.PlaneGeometry.Parallelogram.execute import Execute_Parallelogram
+
 from modules.SolidGeometry.Cube.execute import Execute_Cube
 from modules.SolidGeometry.RectangularPrism.execute import Execute_RectangularPrism
 from modules.SolidGeometry.Sphere.execute import Execute_Sphere
+from modules.SolidGeometry.Cylinder.execute import Execute_Cylinder
 from rich import print
-import colorama
-colorama.init()
-
-
-def clear(): 
-
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
 
 def MainMenu():
     clear()
@@ -62,18 +53,23 @@ def PlaneGeo_Menu():
             select_planegeo = int(input("\n\t  Select from the menu : "))
 
             if select_planegeo == 1:    #square
-                clear()
                 Execute_Square()    # calculate square
                 PlaneGeo_Menu()
 
             elif select_planegeo == 2:  #rectangle
-                clear()
                 Execute_Rectangle() # calculate rectangle
                 PlaneGeo_Menu()
 
             elif select_planegeo == 3:  #triangle
-                clear()
                 __triangle__()  # go to triangle calc submenu
+                PlaneGeo_Menu()
+
+            elif select_planegeo == 4:  #circle
+                Execute_Circle()    # calculate circle
+                PlaneGeo_Menu()
+
+            elif select_planegeo == 5: #parallelogram
+                Execute_Parallelogram()
                 PlaneGeo_Menu()
 
             elif select_planegeo == 99:
@@ -101,19 +97,19 @@ def SolidGeo_Menu():
             select_solidgeo = int(input("\n\t  Select from the menu : "))
 
             if select_solidgeo == 1: #cube
-                clear()
                 Execute_Cube()  #calculate cube
                 SolidGeo_Menu()
 
             elif select_solidgeo == 2: #Rectangular Prism
-                clear()
                 Execute_RectangularPrism()  #calculate rectangular prism
                 SolidGeo_Menu()
 
             elif select_solidgeo == 3: # sphere
-                clear()
-                #input("Sphere calc in development. Press <enter> to continue\n")
                 Execute_Sphere()   #calculate sphere
+                SolidGeo_Menu()
+
+            elif select_solidgeo == 4: # cylinder
+                Execute_Cylinder()
                 SolidGeo_Menu()
 
             elif select_solidgeo == 99:

@@ -10,7 +10,7 @@ def main_banner():
     print(colorama.Fore.LIGHTGREEN_EX, textbanner)   # set textbanner color to light green
     print(colorama.Fore.RESET)  #for reset color to default
     maintext = """
-                    [Version : 1.0.0]
+                    [Version : 1.0.1]
 
             Geometry calculator for calculate 2D plane
                 and 3D solid geometry shapes.
@@ -36,7 +36,7 @@ def PlaneGeo_banner():
     print(colorama.Fore.LIGHTCYAN_EX, textbanner)   # set textbanner color to light green
     print(colorama.Fore.RESET)  #for reset color to default
     planeGeo_text = """
-                    [Version : 1.0.0]
+                    [Version : 1.0.1]
 
             Geometry calculator for calculate 2D plane
                 and 3D solid geometry shapes.
@@ -51,6 +51,8 @@ def PlaneGeo_banner():
             1. Square
             2. Rectangle
             3. Triangle
+            4. Circle
+            5. Parallelogram
 
             99. Go back to the previous menu
                 """
@@ -62,7 +64,7 @@ def SolidGeo_banner():
     print(colorama.Fore.LIGHTYELLOW_EX, textbanner)   # set textbanner color to light green
     print(colorama.Fore.RESET)  #for reset color to default
     solidGeo_text = """
-                    [Version : 1.0.0]
+                    [Version : 1.0.1]
 
             Geometry calculator for calculate 2D plane
                 and 3D solid geometry shapes.
@@ -77,6 +79,7 @@ def SolidGeo_banner():
             1. Cube
             2. Rectangular Prism
             3. Sphere
+            4. Cylinder
 
             99. Go back to the previous menu
                     """
@@ -131,6 +134,18 @@ def rectangle_banner():
     print(colorama.Fore.LIGHTMAGENTA_EX, textbanner)   # set textbanner color
     print(colorama.Fore.RESET)  #for reset color to default
 
+def circle_banner():
+    fontsbanner = Figlet(font='slant')
+    textbanner = (fontsbanner.renderText("Circle"))
+    print(colorama.Fore.LIGHTMAGENTA_EX, textbanner)   # set textbanner color
+    print(colorama.Fore.RESET)  #for reset color to default
+    
+def parallelogram_banner():
+    fontsbanner = Figlet(font='slant')
+    textbanner = (fontsbanner.renderText("Parallelogram"))
+    print(colorama.Fore.LIGHTMAGENTA_EX, textbanner)   # set textbanner color
+    print(colorama.Fore.RESET)  #for reset color to default
+
 """ Solid Geometry banners 
         |
         V
@@ -151,5 +166,11 @@ def rectangularprism_banner():
 def sphere_banner():
     fontsbanner = Figlet(font='slant')
     textbanner = (fontsbanner.renderText("Sphere"))
+    print(colorama.Fore.LIGHTMAGENTA_EX, textbanner)   # set textbanner color
+    print(colorama.Fore.RESET)  #for reset color to default
+    
+def cylinder_banner():
+    fontsbanner = Figlet(font='slant')
+    textbanner = (fontsbanner.renderText("Cylinder"))
     print(colorama.Fore.LIGHTMAGENTA_EX, textbanner)   # set textbanner color
     print(colorama.Fore.RESET)  #for reset color to default

@@ -1,29 +1,21 @@
 # module for execute area & perimeter triangle and pythagorean
 
-from os import system, name
+from modules.clearscreen import clear
 from modules.PlaneGeometry.Triangle.calculate import TriangleArea, TrianglePerimeter
 from modules.PlaneGeometry.Triangle.pythagorean import Pythagorean_Side_a, Pythagorean_Side_b, Pythagorean_Hypotenuse
-from modules.wannaquit import question
-
-def clear(): 
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
+from modules.PlaneGeometry.Triangle.wannaquit import TriangleQuestion, PythagoreanQuestion
+from rich import print
 
 def Execute_Area():
     clear()
-    print("Calculate Triangle Area")
-    #initiating
+    print("Calculate area of the triangle")
     def Input_Base():   #input base length
         try:
             global Base
             Base = float(input("\nEnter base length (b) = "))
-            if Base <= 0:print("[ERROR] The value must greater than 0 !");Input_Base()
+            if Base <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_Base()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_Base()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")
@@ -33,9 +25,9 @@ def Execute_Area():
         try:
             global Height
             Height = float(input("\nEnter height length (h) = "))
-            if Height <= 0:print("[ERROR] The value must greater than 0 !");Input_Height()
+            if Height <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_Height()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_Height()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")
@@ -46,19 +38,20 @@ def Execute_Area():
     area.Calculating_Area()
     result = area.Result_Area()
     print(result)
-    question()
+    question = TriangleQuestion()
+    question.AreaQuestion()
 
 def Execute_Perimeter():
     clear()
-    print("Calculate Triangle Perimeter")
+    print("Calculate perimeter of the triangle")
     #initiating
     def Input_side_a(): #side a
         try:
             global a
             a = float(input("\nEnter the length of side a = "))
-            if a <= 0:print("[ERROR] The value must greater than 0 !");Input_side_a()
+            if a <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side_a()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_side_a()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")
@@ -68,9 +61,9 @@ def Execute_Perimeter():
         try:
             global b
             b = float(input("\nEnter the length of side b = "))
-            if b <= 0:print("[ERROR] The value must greater than 0 !");Input_side_b()
+            if b <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side_b()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_side_b()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")
@@ -80,9 +73,9 @@ def Execute_Perimeter():
         try:
             global c
             c = float(input("\nEnter the length of side c = "))
-            if c <= 0:print("[ERROR] The value must greater than 0 !");Input_side_c()
+            if c <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side_c()
         except ValueError:
-            print("[ERROR] Enter again !")
+            print("[red][ERROR][/red] Value error. Enter again !")
             Input_side_c()
         except KeyboardInterrupt:
             print("\n\nThank you for using Geometry Calc :)")
@@ -93,7 +86,8 @@ def Execute_Perimeter():
     perimeter.Calculating_Perimeter()
     result = perimeter.Result_Perimeter()
     print(result)
-    question()
+    question = TriangleQuestion()
+    question.PerimeterQuestion()
 
 class Execute_Pythagorean:
     def Execute_side_a(self):  # function for find side a
@@ -104,9 +98,9 @@ class Execute_Pythagorean:
             try:
                 global b
                 b = float(input("\nEnter the length of side b = "))
-                if b <= 0:print("[ERROR] The value must greater than 0 !");Input_side_b()
+                if b <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side_b()
             except ValueError:
-                print("[ERROR] Enter again !")
+                print("[red][ERROR][/red] Value error. Enter again !")
                 Input_side_b()
             except KeyboardInterrupt:
                 print("\n\nThank you for using Geometry Calc :)")
@@ -116,14 +110,13 @@ class Execute_Pythagorean:
             try:
                 global c
                 c = float(input("\nEnter the length of side hypotenuse (c) = "))
-                if c <= 0:print("[ERROR] The value must greater than 0 !");Input_side_c()
+                if c <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side_c()
                 if c <= b:
-                    print("\n[ERROR] The value of side hypotenuse (c) must greater than side b. Please repeat again !")
-                    input("Press <enter> to continue\n\n")
-                    print("--- Find Side A of Pythagorean ---")
+                    print("\n[red][ERROR][/red] The value of side hypotenuse (c) must greater than side b. Please repeat again !")
+                    print("Press [magenta]<enter>[/magenta] to continue\n");input()
                     Input_side_b();Input_side_c()
             except ValueError:
-                print("[ERROR] Enter again !")
+                print("[red][ERROR][/red] Value error. Enter again !")
                 Input_side_c()
             except KeyboardInterrupt:
                 print("\n\nThank you for using Geometry Calc :)")
@@ -133,7 +126,8 @@ class Execute_Pythagorean:
         ExecSide_a = Pythagorean_Side_a(b,c)
         ExecSide_a.Find_Side_a()
         result = ExecSide_a.Result_Side_a(); print(result)
-        question()
+        question = PythagoreanQuestion()
+        question.A_Question()
 
     def Execute_side_b(self):  # function for find side b
         clear()
@@ -143,9 +137,9 @@ class Execute_Pythagorean:
             try:
                 global a
                 a = float(input("\nEnter the length of side a = "))
-                if a <= 0:print("[ERROR] The value must greater than 0 !");Input_side_a()
+                if a <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side_a()
             except ValueError:
-                print("[ERROR] Enter again !")
+                print("[red][ERROR][/red] Value error. Enter again !")
                 Input_side_a()
             except KeyboardInterrupt:
                 print("\n\nThank you for using Geometry Calc :)")
@@ -155,14 +149,13 @@ class Execute_Pythagorean:
             try:
                 global c
                 c = float(input("\nEnter the length of side hypotenuse (c) = "))
-                if c <= 0:print("[ERROR] The value must greater than 0 !");Input_side_c()
+                if c <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side_c()
                 if c <= a:
-                    print("\n[ERROR] The value of side hypotenuse (c) must greater than side a. Please repeat again !")
-                    input("Press <enter> to continue\n\n")
-                    print("--- Find Side B of Pythagorean ---")
+                    print("\n[red][ERROR][/red] The value of side hypotenuse (c) must greater than side a. Please repeat again !")
+                    print("Press [magenta]<enter>[/magenta] to continue\n\n");input()
                     Input_side_a();Input_side_c()
             except ValueError:
-                print("[ERROR] Enter again !")
+                print("[red][ERROR][/red] Value error. Enter again !")
                 Input_side_c()
             except KeyboardInterrupt:
                 print("\n\nThank you for using Geometry Calc :)")
@@ -172,7 +165,8 @@ class Execute_Pythagorean:
         ExecSide_b = Pythagorean_Side_b(a,c)
         ExecSide_b.Find_Side_b()
         result = ExecSide_b.Result_Side_b(); print(result)
-        question()
+        question = PythagoreanQuestion()
+        question.B_Question()
 
     def Execute_Hypotenuse(self):  # function for find side hypotenuse
         clear()
@@ -182,9 +176,9 @@ class Execute_Pythagorean:
             try:
                 global a
                 a = float(input("\nEnter the length of side a = "))
-                if a <= 0:print("[ERROR] The value must greater than 0 !");Input_side_a()
+                if a <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side_a()
             except ValueError:
-                print("[ERROR] Enter again !")
+                print("[red][ERROR][/red] Value error. Enter again !")
                 Input_side_a()
             except KeyboardInterrupt:
                 print("\n\nThank you for using Geometry Calc :)")
@@ -194,9 +188,9 @@ class Execute_Pythagorean:
             try:
                 global b
                 b = float(input("\nEnter the length of side b = "))
-                if b <= 0:print("[ERROR] The value must greater than 0 !");Input_side_b()
+                if b <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_side_b()
             except ValueError:
-                print("[ERROR] Enter again !")
+                print("[red][ERROR][/red] Value error. Enter again !")
                 Input_side_b()
             except KeyboardInterrupt:
                 print("\n\nThank you for using Geometry Calc :)")
@@ -206,4 +200,5 @@ class Execute_Pythagorean:
         Exec_Hypotenuse = Pythagorean_Hypotenuse(a,b)
         Exec_Hypotenuse.Find_Hypotenuse()
         result = Exec_Hypotenuse.Result_Hypotenuse(); print(result)
-        question()
+        question = PythagoreanQuestion()
+        question.C_Question()

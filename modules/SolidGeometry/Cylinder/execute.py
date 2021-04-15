@@ -1,15 +1,15 @@
-# module for execute surface area & volume sphere
+# module for execute cylinder
 
 from modules.clearscreen import clear
-from modules.SolidGeometry.Sphere.calculate import Sphere
-from modules.banners import sphere_banner
-from modules.SolidGeometry.Sphere.wannaquit import MainQuestion
+from modules.SolidGeometry.Cylinder.calculate import Cylinder
+from modules.banners import cylinder_banner
+from modules.SolidGeometry.Cylinder.wannaquit import MainQuestion
 from rich import print
 
-def Execute_Sphere():
+def Execute_Cylinder():
     clear()
-    sphere_banner()
-    print("Calculate surface area and volume of the sphere")
+    cylinder_banner()
+    print("Calculate surface area and volume of the cylinder")
     #initiating
     def Input_radius():
         try:
@@ -23,6 +23,18 @@ def Execute_Sphere():
             print("\n\nThank you for using Geometry Calc :)")
             exit()
     Input_radius()
+    def Input_height():
+        try:
+            global height
+            height = float(input("\nEnter height length (h) = "))
+            if height <= 0:print("[red][ERROR][/red] Invalid value. The value must greater than 0 !");Input_height()
+        except ValueError:
+            print("[red][ERROR][/red] Value error. Enter again !")
+            Input_height()
+        except KeyboardInterrupt:
+            print("\n\nThank you for using Geometry Calc :)")
+            exit()
+    Input_height()
     def Input_pi():
         try:
             global PI
@@ -38,7 +50,7 @@ Example : 3.14159""")
             print("\n\nThank you for using Geometry Calc :)")
             exit()
     Input_pi()
-    ExecSphere = Sphere(radius,PI)
-    ExecSphere.Calculating_Volume();ExecSphere.Calculating_SurfaceArea()
-    result = ExecSphere.Result();print(result)
+    ExecCylinder = Cylinder(radius, height, PI)
+    ExecCylinder.Calculating_Volume();ExecCylinder.Calculating_SurfaceArea()
+    result = ExecCylinder.Result();print(result)
     MainQuestion()

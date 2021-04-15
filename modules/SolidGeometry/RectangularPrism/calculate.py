@@ -40,6 +40,6 @@ class RectangularPrism:
         
         Rectangular prism surface area   = {surface_area} cm^2
         
-        Rectangle prism volume           = {volume} cm^3
+        Rectangular prism volume         = {volume} cm^3
                     """
         return res

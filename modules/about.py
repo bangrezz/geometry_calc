@@ -1,15 +1,5 @@
-from os import system, name
+from modules.clearscreen import clear
 from rich import print
-
-def clear(): 
-
-	# for windows 
-	if name == 'nt': 
-		_ = system('cls') 
-
-	# for mac and linux(here, os.name is 'posix') 
-	else: 
-		_ = system('clear')
 
 def printabout():
     print("""
@@ -55,15 +45,18 @@ python3 geometry_calc.py
 
 ## Note
 1. The units displayed don't affect the calculation results. it's just a view.
-2. Available shapes :
+2. Available geometry shapes :
    - Plane geometry
-        - rectangle
-        - square
-        - triangle (included pythagorean)
+        - Rectangle
+        - Square
+        - Triangle (included pythagorean)
+        - Circle    [NEW]
+        - Parallelogram  [NEW]
    - Solid geometry
-        - cube
-        - rectangle prism
-        - sphere
+        - Cube
+        - Rectangular prism
+        - Sphere
+        - Cylinder [NEW]
 3. Other geometry shapes are under development
     """)
     print("\nPress [blue]<enter>[/blue] to continue");input()

@@ -1,17 +1,16 @@
-# module for execute surface area & volume sphere
-
+# module for execute area & circumference circle
 from modules.clearscreen import clear
-from modules.SolidGeometry.Sphere.calculate import Sphere
-from modules.banners import sphere_banner
-from modules.SolidGeometry.Sphere.wannaquit import MainQuestion
+from modules.PlaneGeometry.Circle.calculate import Circle
+from modules.banners import circle_banner
+from modules.PlaneGeometry.Circle.wannaquit import MainQuestion
 from rich import print
 
-def Execute_Sphere():
+def Execute_Circle():
     clear()
-    sphere_banner()
-    print("Calculate surface area and volume of the sphere")
+    circle_banner()
+    print("Calculate area and circumference of the circle")
     #initiating
-    def Input_radius():
+    def Input_radius():   #input side length
         try:
             global radius
             radius = float(input("\nEnter radius length (r) = "))
@@ -38,7 +37,7 @@ Example : 3.14159""")
             print("\n\nThank you for using Geometry Calc :)")
             exit()
     Input_pi()
-    ExecSphere = Sphere(radius,PI)
-    ExecSphere.Calculating_Volume();ExecSphere.Calculating_SurfaceArea()
-    result = ExecSphere.Result();print(result)
+    ExecCircle = Circle(radius,PI)
+    ExecCircle.Calculating_Area();ExecCircle.Calculating_Circumference()
+    result = ExecCircle.Result();print(result)
     MainQuestion()
