@@ -46,6 +46,7 @@ python3 geometry_calc.py
         - Square
         - Triangle (included pythagorean)
         - Circle    [NEW]
+        - Parallelogram  [NEW]
    - Solid geometry
         - Cube
         - Rectangular prism
